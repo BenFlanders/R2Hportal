@@ -1,0 +1,681 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    --bg-nav: #FCFCFC;
+    --bg: #EBEBEB;
+    --text-color:black;
+    --border-light: 2px solid #ccc;
+    --shadow-light: 5px 10px 8px #ccc;
+    --menu:#363636;
+    --inverse: white;
+}
+
+html[data-theme='dark']{
+    --bg-nav:#242424;
+    --bg: #363636;
+    --text-color: white;
+    --bg-heading: white;
+    --border-light: 2px solid black;
+    --shadow-light: 5px 10px 8px black;
+    --menu: #EBEBEB;
+    --inverse:black;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: var(--bg);
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.main-links a:hover{
+    color:#22c2c6;
+}
+
+.navbar{
+    width:100%;
+    height:8rem;
+    position:fixed;
+    top:0;
+    z-index: 100;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-nav);
+}
+
+.side-menu{
+    display:none;
+}
+
+.open-slide{
+    position:absolute;
+    top:0;
+    left:0;
+    font-size: 4rem;
+    margin:1.8rem 4rem;
+}
+
+#btn-close{
+    position:absolute;
+    top:12rem;
+    left: 142px;
+    font-size: 3.5rem;
+    color: var(--inverse);
+    margin-left: -400px;
+    transition: .3s ease all;
+}
+
+.side-links{
+    width:300px;
+    height:100vh;
+    margin-left: -400px;
+    background-color: var(--menu);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 2rem;
+    transition: .3s ease all;
+    position: absolute;
+    top:8rem;
+    left:0;
+    z-index:-1;
+    padding:10rem 0;
+}
+
+.side-links a{
+    color: var(--inverse);
+}
+
+.main-nav{
+    width:100%;
+    height:8rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-nav img{
+    margin-top:-1rem;
+    height:4rem;
+    transition: .35s ease all;
+}
+
+.main-links li{
+    display:inline;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+input[type=checkbox]{
+    height:0;
+    width:0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width:52px;
+    height:27px;
+    background: grey;
+    float:right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top:3px;
+    left:3px;
+    width:20px;
+    height:20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label{
+    background-color: var(--bg-heading);
+}
+
+input:checked + label:after{
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background:grey;
+}
+
+label:active:after{
+    width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after{
+    transition: all .3s !important;
+    transition-delay: 0 !important;
+}
+
+.hero{
+    width:100%;
+    height:310px;
+    background-image: url('img/Hero.png');
+    color:white;
+    margin-top:8rem;
+}
+
+.hero h1{
+    font-size: 4rem;
+    padding:4rem;
+}
+
+.hero p{
+    font-size: 2rem;
+    padding:0 4rem;
+}
+
+main h1{
+    color:var(--text-color);
+    padding:3.2rem 0 0 3.2rem;
+}
+
+.container{
+    width:300px;
+    height:250px;
+    margin:3rem;
+    margin-bottom:4rem;
+    transition: 0.3s ease all;
+}
+
+.container:hover{
+    transform: scale(1.05);
+}
+
+.top{
+    height:169px;
+    width:100%;
+    border-radius: 15px 15px 0 0;
+    border-left: var(--border-light);
+    border-right: var(--border-light);
+    border-top: var(--border-light);
+    box-shadow: var(--shadow-light);
+}
+
+.one{
+    background-image: url('img/ppt\ 1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.two{
+    background-image: url('img/PPT\ 2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.three{
+    background-image: url('img/PPT\ 3.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.four{
+    background-image: url('img/PPT\ 4.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.five{
+    background-image: url('img/PPT\ 5.png');
+    background-position: center;
+    background-size: cover;
+}
+.six{
+    background-image: url('img/PPT\ 6.png');
+    background-position: center;
+    background-size: cover;
+}
+.seven{
+    background-image: url('img/PPT\ 7.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.eight{
+    background-image: url('img/PPT\ 8.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.nine{
+    background-image: url('img/PPT\ 9.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ten{
+    background-image: url('img/PPT\ 10.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.eleven{
+    background-image: url('img/PPT\ 11.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twelve{
+    background-image: url('img/PPT\ 12.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.thirteen{
+    background-image: url('img/PPT\ 13.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.fourteen{
+    background-image: url('img/PPT\ 14.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.fifteen{
+    background-image: url('img/PPT\ 15.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.sixteen{
+    background-image: url('img/PPT\ 16.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.seventeen{
+    background-image: url('img/PPT\ 17.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.eightteen{
+    background-image: url('img/PPT\ 18.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.nineteen{
+    background-image: url('img/PPT\ 19.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twenty{
+    background-image: url('img/PPT\ 20.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentyone{
+    background-image: url('img/PPT\ 21.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentytwo{
+    background-image: url('img/PPT\ 22.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentythree{
+    background-image: url('img/PPT\ 23.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentyfour{
+    background-image: url('img/PPT\ 24.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentyfive{
+    background-image: url('img/PPT\ 25.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentysix{
+    background-image: url('img/PPT\ 26.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentyseven{
+    background-image: url('img/PPT\ 27.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentyeight{
+    background-image: url('img/PPT\ 28.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.twentynine{
+    background-image: url('img/PPT\ 29.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.thirty{
+    background-image: url('img/PPT\ 30.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.thirtyone{
+    background-image: url('img/PPT\ 31.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.a{
+    background-image: url('img/GI\ 1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.b{
+    background-image: url('img/GI\ 2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.c{
+    background-image: url('img/GI\ 3.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.d{
+    background-image: url('img/GI\ 4.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.e{
+    background-image: url('img/GI\ 5.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.f{
+    background-image: url('img/GI\ 6.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.g{
+    background-image: url('img/GI\ 7.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.h{
+    background-image: url('img/GI\ 8.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.i{
+    background-image: url('img/GI\ 9.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.j{
+    background-image: url('img/GI\ 10.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.j{
+    background-image: url('img/GI\ 11.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.k{
+    background-image: url('img/GI\ 12.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.l{
+    background-image: url('img/GI\ 13.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.m{
+    background-image: url('img/GI\ 14.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.aa{
+    background-image: url('img/U\ 1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.bb{
+    background-image: url('img/U\ 2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.cc{
+    background-image: url('img/U\ 3.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.dd{
+    background-image: url('img/U\ 4.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ee{
+    background-image: url('img/U\ 5.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ff{
+    background-image: url('img/U\ 6.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.aaa{
+    background-image: url('img/L\ 1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.bbb{
+    background-image: url('img/L\ 2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ccc{
+    background-image: url('img/L\ 3.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ddd{
+    background-image: url('img/L\ 4.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.eee{
+    background-image: url('img/L\ 5.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.fff{
+    background-image: url('img/L\ 6.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ggg{
+    background-image: url('img/L\ 7.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.bottom{
+    width:100%;
+    height:81px;
+    font-size: 1.3rem;
+    background:white;
+    border-left: var(--border-light);
+    border-right: var(--border-light);
+    border-bottom: var(--border-light);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: var(--shadow-light);
+    color:black;
+}
+
+.gallery{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display:flex;
+}
+
+#powerpoints{
+    overflow-y:hidden;
+}
+
+#links{
+    margin-bottom:2rem;
+}
+
+footer{
+    width:100%;
+    height:8rem;
+    background-color: var(--bg-nav);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1150px){
+    .hero{
+        width:100%;
+        height:310px;
+        background-size: cover;
+        background-position-x: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+    .main-links{
+        display:none;
+    }
+    #logo{
+        position:absolute;
+        top:2.5rem;
+        left:12rem;
+    }
+    .darkToggle{
+        position:absolute;
+        right:4rem;
+    }
+    .side-menu{
+        display:block;
+    }
+
+    .hero{
+        width:100%;
+        height:310px;
+        background-size: cover;
+        background-position-x: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .hero{
+        width:100%;
+        height:310px;
+        background-size: cover;
+        background-position-x: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .open-slide{
+        margin:1.8rem 1rem;
+    }
+
+    .darkToggle{
+        position:absolute;
+        right:1rem;
+    }
+
+    #logo{
+        position:absolute;
+        top:2.5rem;
+        left:8rem;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+
+    .container{
+        margin:1rem;
+    }
+
+    .hero{
+        width:100%;
+        height:310px;
+        background-image: url('img/hero.jpg');
+        background-size: cover;
+        background-position-x: 20%;
+    }
+}
+
